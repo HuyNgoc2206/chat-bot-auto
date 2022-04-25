@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "428765400413",
+    "project_id": "chatbot-edefb",
+    "storage_bucket": "chatbot-edefb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428765400413:android:3eacad1901d9d3a314acb4",
+        "android_client_info": {
+          "package_name": "com.codepalace.chatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428765400413-3knnbc5njbh8e270ej3omdcbp90bfnt9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codepalace.chatbot",
+            "certificate_hash": "cffa54705854e65260efd1aeb4d648648afeaed5"
+          }
+        },
+        {
+          "client_id": "428765400413-n0mv1v3qbltp4fuqkpk1572qkpf2f9kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUN0HycAyIzz2RfILM3FJrqKMM6s62Upk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428765400413-n0mv1v3qbltp4fuqkpk1572qkpf2f9kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
