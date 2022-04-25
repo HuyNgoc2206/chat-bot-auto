@@ -1,5 +1,6 @@
 package com.codepalace.chatbot.utils
 
+import com.codepalace.chatbot.utils.Constants.OPEN_FACEBOOK
 import com.codepalace.chatbot.utils.Constants.OPEN_GOOGLE
 import com.codepalace.chatbot.utils.Constants.OPEN_SEARCH
 import com.codepalace.chatbot.utils.Constants.OPEN_SEARCHYOUTOBE
@@ -17,14 +18,35 @@ object BotResponse {
 
         return when {
 
-            //Flips a coin
+            //hỏi and trả lời
             message.contains("Tds") -> {
                 val r = (0..1).random()
                 val result = if (r == 0) "heads" else "tails"
 
                 "I flipped a coin and it landed on $result"
             }
-            message.contains("tai sao khong vao duoc web cua truong") -> {
+            message.contains("Toi muon biet them ve truong") -> {
+                when (random) {
+                    0 -> " Hi TSV, "
+                    1 -> "Truong nhieu thu ham lol lam"
+                    else -> "toi cung khong biet gioi thieu nhu nao, nhung ma ban tu tu tim hieu di nha "
+                }
+            }
+            message.contains("Trường có nhiều gái xinh không") -> {
+                when (random) {
+                    0 -> " Hi TSV "
+                    1 -> "Nhieu lam nhung ma toi cha quan tam, tại leo cao quá ngã đau "
+                    else -> "toi cung khong biet gioi thieu nhu nao, nhung ma ban tu tu tim hieu di nha "
+                }
+            }
+            message.contains("Hello") -> {
+                when (random) {
+                    0 -> " Hi TSV, "
+                    1 -> "Dạo này bạn khỏe không"
+                    else -> "Nếu khỏe thì tốt rồi, chúc bạn học tập thật zuiii"
+                }
+            }
+            message.contains("tại sao tôi không vào được web của trường") -> {
                 when (random) {
                     0 -> " mình nghĩ là bạn nhập sai địa chỉ "
                     1 -> "Do số lượng snh viên truy cập quá tải nên bạn có thể load lại trang để thử vận may của mình nhé"
@@ -32,9 +54,9 @@ object BotResponse {
                 }
             }
 
-            message.contains("truong nay ten gi vay") -> {
+            message.contains("trường tên gì vậy?") -> {
                 when (random) {
-                    0 -> "Bạn hỏi câu nghe phát chán. Trường này tên Đại học Đông Á. Vậy cũng hỏi"
+                    0 -> "Đi ra cổng chính, có cái bảng tên trường to chà bá lữa kìa ông thần"
                     1 -> "tôi nghĩ bạn k phải sinh viên trường mình rồi  "
                     2 -> " Bạn hỏi câu nghe phát chán. Trường này tên Đại học Đông Á. Vậy cũng hỏi"
                     else -> " error"
@@ -98,14 +120,16 @@ object BotResponse {
             message.contains("mo") && message.contains("youtobe") -> {
                 OPEN_YOUTOBE
             }
-
+            message.contains("facebook") && message.contains("https://www.facebook.com/nvpt2440000/") -> {
+                OPEN_FACEBOOK
+            }
 
             //When the programme doesn't understand...
             else -> {
                 when (random) {
-                    0 -> "xin lỗi tôi không hiểu"
-                    1 -> "bạn thử hỏi tôi điều gì đó khác được không"
-                    2 -> "thanks bạn nhá"
+                    0 -> "bot hơi ngu, mn thông cảm nha"
+                    1 -> "hông biết nữa, ai biết gì đâu "
+                    2 -> "cút, cho ăn chiếc dép bây giờ"
                     else -> "error"
                 }
             }
