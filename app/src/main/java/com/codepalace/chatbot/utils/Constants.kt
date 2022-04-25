@@ -10,4 +10,5 @@ object Constants {
 
     const val OPEN_YOUTOBE = "mo youtobe"
     const val OPEN_SEARCHYOUTOBE = " youtobe seach"
+    const val OPEN_FACEBOOK = " facebook search "
 }
